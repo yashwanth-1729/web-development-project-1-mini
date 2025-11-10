@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Login Page</title>
+  <style>
+    /* ===============================
+       GLOBAL STYLES
+    =============================== */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* ===============================
+       LOGIN CONTAINER
+    =============================== */
+    .login-container {
+      background: #fff;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-container img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #1a237e;
+      font-size: 24px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #4a90e2;
+    }
+
+    button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 95%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #4a90e2;
+      font-size: 14px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ===============================
+       RESPONSIVE DESIGN
+    =============================== */
+
+    /* Tablet View */
+    @media (max-width: 768px) {
+      body {
+        background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+        padding: 20px;
+        height: auto;
+      }
+
+      .login-container {
+        width: 80%;
+        padding: 30px 25px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+
+    /* Mobile View */
+    @media (max-width: 480px) {
+      .login-container {
+        width: 95%;
+        padding: 25px 15px;
+        border-radius: 10px;
+      }
+
+      .login-container img {
+        width: 80px;
+        height: 80px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        font-size: 15px;
+        padding: 8px 16px;
+      }
+
+      .back-link {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="logo.jpg" alt="School Logo">
+    <h2>Teacher Login</h2>
+
+    <input type="text" id="teacherID" placeholder="Enter Teacher ID" required>
+    <input type="password" id="teacherPassword" placeholder="Enter Password" required>
+
+    <button onclick="loginTeacher()">Login</button>
+
+    <a href="WEB1.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    // Simple demo login validation
+    function loginTeacher() {
+      const id = document.getElementById("teacherID").value.trim();
+      const password = document.getElementById("teacherPassword").value.trim();
+
+      if (id === "" || password === "") {
+        alert("⚠️ Please enter both ID and password.");
+      } 
+      else if (id === "teacher01" && password === "klu@123") {
+        alert("✅ Welcome, Teacher " + id + "!");
+        window.location.href = "dress.html";
+      } 
+      else {
+        alert("❌ Incorrect ID or password.");
+      }
+    }
+  </script>
+
+</body>
+</html>

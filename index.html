@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* Overall Page Styling */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Header Section */
+    header {
+      width: 100%;
+      text-align: center; 
+      font-size: 28px;
+      font-weight: 600;
+      color: #1a237e;
+      margin-bottom: 20px;
+    }  
+
+    /* Login Box */
+    .login-box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px 60px;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .login-box h2 {
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    /* Buttons */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .login-button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #357ab8;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .login-box {
+        width: 80%;
+        padding: 30px;
+      }
+
+      .button-container {
+        flex-direction: column;
+      }
+
+      .login-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Welcome to Our Institution</header>
+
+  <div class="login-box">
+    <img src="logo.jpg" alt="School Logo">
+    <h2>Select User Type to Continue</h2>
+    <div class="button-container">
+      <button class="login-button" onclick="window.location.href='web3.html'">Login as Teacher</button>
+      <button class="login-button" onclick="window.location.href='web2.html'">Login as Student</button>
+    </div>
+  </div>
+
+</body>
+</html>
