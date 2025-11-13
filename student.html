@@ -175,8 +175,10 @@
       if (username === 'ravi' && password === 'klu@123') {
         alert('✅ Login successful — Welcome, ' + username + '!');
         window.location.href = 'studentpage2.html';
-      } else {
-        alert('❌ Incorrect username or password.');
+      } else if(username == 'ravi' && password != 'klu@123') {
+        alert('❌ Incorrect password.');
+      } else{
+         alert('❌ Incorrect username or password.');
       }
     }
   </script>
