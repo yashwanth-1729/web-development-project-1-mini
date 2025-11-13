@@ -163,7 +163,7 @@
     
     <button  onclick="loginStudent()" ;>Login</button>
     
-    <a href="index.html" class="back-link";href = >← Back to Home</a>
+    <a href="index.html" class="back-link" href = >← Back to Home</a>
   </div>
 
   <script>
@@ -172,10 +172,10 @@
       const username = document.getElementById('studentName').value.trim();
       const password = document.getElementById('studentPassword').value.trim();
 
-      if (username === 'ravi' && password === 'klu@123') {
+      if ((username === 'guru' || username === 'yashwanth' || username === 'dharma' )&& password === 'klu@123') {
         alert('✅ Login successful — Welcome, ' + username + '!');
         window.location.href = 'studentpage2.html';
-      } else if(username == 'ravi' && password != 'klu@123') {
+      } else if ((username === 'guru' || username === 'yashwanth' || username === 'dharma' )&& password != 'klu@123') {
         alert('❌ Incorrect password.');
       } else{
          alert('❌ Incorrect username or password.');

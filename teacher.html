@@ -177,10 +177,12 @@
       if (id === "" || password === "") {
         alert("⚠️ Please enter both ID and password.");
       } 
-      else if (id === "teacher01" && password === "klu@123") {
+      else if (id === "varaprasad" && password === "klu@123") {
         alert("✅ Welcome, Teacher " + id + "!");
         window.location.href = "teacherpage2.html";
-      } 
+      } else if (id === "varaprasad" && password != "klu@123"){
+        alert("❌ Incorrect password.Please Try Again")
+      }
       else {
         alert("❌ Incorrect ID or password.");
       }
