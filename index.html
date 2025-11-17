@@ -4,100 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
+
   <style>
-    /* Overall Page Styling */
+    /* -------------------------------
+       Overall Page Styling (BODY)
+       ------------------------------- */
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #74ebd5, #acb6e5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      margin: 0; /* Removes default white border */
+      font-family: 'Poppins', sans-serif; /* Sets font style */
+      background: linear-gradient(to right, #74ebd5, #acb6e5); /* Gradient background */
+      display: flex; /* Enables flexbox layout */
+      flex-direction: column; /* Elements stacked vertically */
+      align-items: center; /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      height: 100vh; /* Full screen height */
     }
 
-    /* Header Section */
+    /* -------------------------------
+       Header Styling
+       ------------------------------- */
     header {
-      width: 100%;
-      text-align: center; 
-      font-size: 28px;
-      font-weight: 600;
-      color: #1a237e;
-      margin-bottom: 20px;
+      width: 100%; /* Full page width */
+      text-align: center; /* Center the text */
+      font-size: 28px; /* Big text */
+      font-weight: 600; /* Semi bold */
+      color: #1a237e; /* Dark blue text */
+      margin-bottom: 20px; /* Space below header */
     }  
 
-    /* Login Box */
+    /* -------------------------------
+       Login Box Styling
+       ------------------------------- */
     .login-box {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 40px 60px;
-      text-align: center;
+      background-color: #fff; /* White box */
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      padding: 40px 60px; /* Inside spacing */
+      text-align: center; /* Center content */
     }
 
+    /* Logo Image Styling */
     .login-box img {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 20px;
+      width: 100px; /* Fixed width */
+      height: 100px; /* Fixed height */
+      margin-bottom: 20px; /* Space below logo */
     }
 
+    /* Heading inside Login Box */
     .login-box h2 {
-      color: #333;
-      font-weight: 500;
-      margin-bottom: 30px;
+      color: #333; /* Dark text color */
+      font-weight: 500; /* Medium bold */
+      margin-bottom: 30px; /* Space below heading */
     }
 
-    /* Buttons */
+    /* -------------------------------
+       Button Container Styling
+       ------------------------------- */
     .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      display: flex; /* Buttons side-by-side */
+      justify-content: center; /* Center buttons */
+      gap: 20px; /* Space between buttons */
     }
 
+    /* Login Buttons Styling */
     .login-button {
-      background-color: #4a90e2;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 25px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      background-color: #4a90e2; /* Blue button */
+      color: white; /* White text */
+      border: none; /* No border */
+      border-radius: 8px; /* Rounded edges */
+      padding: 12px 25px; /* Button size */
+      font-size: 16px; /* Medium text size */
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: background-color 0.3s; /* Smooth hover effect */
     }
 
+    /* Button Hover Effect */
     .login-button:hover {
-      background-color: #357ab8;
+      background-color: #357ab8; /* Darker blue on hover */
     }
 
-    /* Responsive */
+    /* -------------------------------
+       Responsive Design for Mobile
+       (Screen width below 600px)
+       ------------------------------- */
     @media (max-width: 600px) {
       .login-box {
-        width: 80%;
-        padding: 30px;
+        width: 80%; /* Reduce box width */
+        padding: 30px; /* Reduce padding */
       }
 
       .button-container {
-        flex-direction: column;
+        flex-direction: column; /* Buttons vertical */
       }
 
       .login-button {
-        width: 100%;
+        width: 100%; /* Buttons full width */
       }
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Top Header / Title -->
   <header>Welcome to Our Institution</header>
 
+  <!-- Main Login Box -->
   <div class="login-box">
+
+    <!-- Logo Image -->
     <img src="logo.jpg" alt="School Logo">
+
+    <!-- Heading Text -->
     <h2>Select User Type to Continue</h2>
+
+    <!-- Buttons for Teacher & Student -->
     <div class="button-container">
-      <button class="login-button" onclick="window.location.href='teacher.html'">Login as Teacher</button>
-      <button class="login-button" onclick="window.location.href='student.html'">Login as Student</button>
+      <button class="login-button" onclick="window.location.href='teacher.html'">
+        Login as Teacher
+      </button>
+
+      <button class="login-button" onclick="window.location.href='student.html'">
+        Login as Student
+      </button>
     </div>
+
   </div>
 
 </body>
