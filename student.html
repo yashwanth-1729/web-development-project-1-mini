@@ -173,8 +173,9 @@
       const password = document.getElementById('studentPassword').value.trim();
 
       if ((username === 'guru' || username === 'yashwanth' || username === 'dharma' )&& password === 'klu@123') {
+         window.location.href = 'studentpage2.html';
         alert('✅ Login successful — Welcome, ' + username + '!');
-        window.location.href = 'studentpage2.html';
+       
       } else if ((username === 'guru' || username === 'yashwanth' || username === 'dharma' )&& password != 'klu@123') {
         alert('❌ Incorrect password.');
       } else{
